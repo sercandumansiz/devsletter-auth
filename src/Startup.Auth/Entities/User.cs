@@ -21,11 +21,13 @@ namespace Startup.Auth.Entities
         public LoginType LoginType { get; set; } = LoginType.Internal;
         [BsonElement("Role")]
         public string Type { get; set; } = Role.Observer;
+        [BsonElement("ProducerInfo")]
+        public ProducerInfo ProducerInfo { get; set; }
     }
+}
 
-    public enum LoginType
-    {
-        Internal = 1,
-        Twitter = 2
-    }
+public enum LoginType
+{
+    Internal = 1,
+    Twitter = 2
 }
